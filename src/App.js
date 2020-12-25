@@ -1,6 +1,7 @@
 import RandomUser from './components/RandomUser/RandomUser';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Header from './components/Header/Header';
 
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
     .then(data => setUser(data.results))
   },[])
   return (
-    <RandomUser user={user}></RandomUser>
+    <div>
+      <Header></Header>
+      <RandomUser user={user}></RandomUser>
+    </div>
   );
 }
 
